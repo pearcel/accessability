@@ -9,11 +9,43 @@ class AccessabilityinitialMigration extends CmfiveMigration {
 				->setType('biginteger')
 				->setIdentity(true);
 
+				
+
+				if (!$this->hasTable("accessability_issue")) { //it can be helpful to check that the table name is not used
+					$this->table("accessability_issue", [ // table names should be appended with 'ModuleName_'
+						"id" => false,
+						"primary_key" => "id"
+					])->addColumn($column) // add the id column
+					->addStringColumn('name')
+					->addStringColumn('store_name')
+					->addIntegerColumn('assitance_type_id')
+					
+					->addStringColumn('store_location')
+					
+					->addStringColumn('other_location')
+					
+					->addStringColumn('issue')
+					
+					->addCmfiveParameters() // this function adds some standard columns used in cmfive. dt_created, dt_modified, creator_id, modifier_id, and is_deleted.
+					
+					->create();
+				}
+
+
+
+
 	}
 
 	public function down() {
 		// DOWN
+		$this->hasTable('accessability_issue') ? $this->dropTable('accessability_issue') : null;
+
+
+		
 	}
+
+	
+	
 
 	public function preText()
 	{
