@@ -11,11 +11,18 @@ function edit_GET(Web $w) {
             [                                   // each array on this level represents a row on the form. This row has only a single input.
                 ['Name','text','name',''],      // this if the input field definition. [Label, type, name, value]
             ],
-            [                                   // this row has 3 input fields.
-                ['Checked','checkbox','is_checked',0],
-                ['Date Started', 'date','dt_started',null],
-                ['Number','text','my_integer',0]
-            ]
+            [                                   // each array on this level represents a row on the form. This row has only a single input.
+            ['Store Name','text','store_name',''],      // this if the input field definition. [Label, type, name, value]
+            ],
+            [                                   // each array on this level represents a row on the form. This row has only a single input.
+            ['Store Location','text','name',''],      // this if the input field definition. [Label, type, name, value]
+            ],
+            [                                   // each array on this level represents a row on the form. This row has only a single input.
+            ['Other Location','text','other_location',''],      // this if the input field definition. [Label, type, name, value]
+            ],
+            [                                   // each array on this level represents a row on the form. This row has only a single input.
+            ['Issue','text','issue',''],      // this if the input field definition. [Label, type, name, value]
+            ],
         ]
     ];
 
