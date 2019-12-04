@@ -27,14 +27,14 @@ function edit_GET(Web $w) {
     ];
 
     // sending the form to the 'out' function bypasses the template. 
-    $w->out(Html::multiColForm($formData, 'accessability-issues/edit')); 
+    $w->out(Html::multiColForm($formData, '/accessability-issues/edit')); 
 
 }
 
 function edit_POST(Web $w) {
 
     //create a new example item object
-    $item = new ExampleItem($w);
+    $item = new AccessabilityIssue($w);
     
     //use the fill function to fill input field data into properties with matching names
     $item->fill($_POST);
@@ -43,7 +43,7 @@ function edit_POST(Web $w) {
     $item->insertOrUpdate();
     
     // the msg (message) function redirects with a message box
-    $w->msg('Item Saved', '/example');
+    $w->msg('Item Saved', '/accessability-issues/index');
 }
 
 
