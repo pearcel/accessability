@@ -17,6 +17,7 @@ class AccessabilityinitialMigration extends CmfiveMigration {
 						"primary_key" => "id"
 					])->addColumn($column) // add the id column
 					->addStringColumn('name')
+					->addStringColumn('email')
 					->addStringColumn('store_name')
 					->addIntegerColumn('assitance_type_id')
 					

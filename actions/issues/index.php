@@ -10,12 +10,13 @@ function index_ALL(Web $w) {
 
     // build the table array adding the headers and the row data
     $table = [];
-    $tableHeaders = ['Name','Store Name','Store Location','Other Location','Issue'];
+    $tableHeaders = ['Name','email','Store Name','Store Location','Other Location','Issue'];
     if (!empty($exampleItems)) {
         foreach ($exampleItems as $item) {
             $row = [];
             // add values to the row in the same order as the table headers
             $row[] = $item->name;
+            $row[] = $item->email;
             $row[] = $item->store_name;
             $row[] = $item->store_location;
             $row[] = $item->other_location;
