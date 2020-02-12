@@ -1,6 +1,6 @@
 <?php
 
-class Accessability_MobilityIssue extends DbObject {
+class AccessabilityMobilityIssue extends DbObject {
 
     public $manual_wheelchair;
     public $electric_wheelchair;
@@ -11,5 +11,6 @@ class Accessability_MobilityIssue extends DbObject {
     public $guide_dog;
     public $vison_cane;
     public $assistance_dog;
+    public $prosthetic_limb;
     
 }
